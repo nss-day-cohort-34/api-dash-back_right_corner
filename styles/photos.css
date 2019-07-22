@@ -1,0 +1,22 @@
+body{
+    background-color: goldenrod;
+}
+
+#images--list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+
+.images {
+    flex-basis: 18%;
+    border: 2px solid blue;
+    margin: 2px;
+    padding: 0.5em;
+
+
+
+}
+
+
