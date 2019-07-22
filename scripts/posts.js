@@ -4,9 +4,12 @@ fetch('https://jsonplaceholder.typicode.com/posts')
     .then(data => data.json())
     .then(posts => {
         posts.forEach(post => {
-            console.log(post);
-        })
-    })
+            if (posts.indexOf(post) <= 19) {
+                postContainer.innerHTML += newPostHTML(post);
+                console.log(post);
+            }
+        });
+    });
 
 const postContainer = document.querySelector('.posts');
 
@@ -14,5 +17,5 @@ const newPostHTML = (post) => {
     return `<section class="post">
                 <h1 class="post__title">${post.title}</h1>
                 <p class="post__content">${post.body}</p>
-            </section>`
+            </section>`;
 }
